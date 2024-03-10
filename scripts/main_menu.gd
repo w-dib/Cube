@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 func _on_start_game_pressed() -> void:
-	print("Game Starting")
+	hide()
 
 func _on_credits_pressed() -> void:
 	print("Credits")
