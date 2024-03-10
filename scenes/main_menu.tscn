@@ -1,0 +1,160 @@
+[gd_scene load_steps=16 format=3 uid="uid://dlxcxih8mx52a"]
+
+[ext_resource type="Texture2D" uid="uid://c2i3i25mdiuu2" path="res://assets/UI/bg.webp" id="1_6ec2x"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_o0ddq"]
+[ext_resource type="Texture2D" uid="uid://bukby5q7uf418" path="res://assets/UI/grey_panel.png" id="2_iebwc"]
+[ext_resource type="Texture2D" uid="uid://c26vwebnfk30a" path="res://assets/UI/yellow_button00.png" id="3_2pkrc"]
+[ext_resource type="Texture2D" uid="uid://deitgmjm1wuq5" path="res://assets/UI/yellow_button01.png" id="4_mroeq"]
+[ext_resource type="Texture2D" uid="uid://5rhversh17vq" path="res://assets/UI/yellow_button02.png" id="5_mbo6k"]
+[ext_resource type="Texture2D" uid="uid://c4y4gg0sbdgxf" path="res://assets/UI/yellow_button05.png" id="6_xm1x8"]
+[ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="7_s2gne"]
+[ext_resource type="Texture2D" uid="uid://dqucwrftex7ft" path="res://assets/UI/blue_button00.png" id="8_10d8l"]
+[ext_resource type="Texture2D" uid="uid://qm4e86irokd4" path="res://assets/UI/blue_button01.png" id="9_fkusq"]
+[ext_resource type="Texture2D" uid="uid://dehgou8p5peoo" path="res://assets/UI/blue_button02.png" id="10_cpwhw"]
+[ext_resource type="Texture2D" uid="uid://csectm7tj0r7k" path="res://assets/UI/blue_button03.png" id="11_032pa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k5a16"]
+font = ExtResource("7_s2gne")
+font_size = 72
+font_color = Color(0.34902, 0.34902, 0.34902, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3twwm"]
+font = ExtResource("7_s2gne")
+font_size = 28
+
+[sub_resource type="LabelSettings" id="LabelSettings_ek8kx"]
+font = ExtResource("7_s2gne")
+font_size = 28
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_o0ddq")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1024.0
+grow_horizontal = 2
+texture = ExtResource("1_6ec2x")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer"]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+texture = ExtResource("2_iebwc")
+region_rect = Rect2(0, 0, 100, 100)
+patch_margin_left = 10
+patch_margin_top = 10
+patch_margin_right = 10
+patch_margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/NinePatchRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = -77.0
+offset_right = 136.0
+offset_bottom = 78.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 3
+text = " CUBE"
+label_settings = SubResource("LabelSettings_k5a16")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StartGame" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_2pkrc")
+texture_pressed = ExtResource("4_mroeq")
+texture_hover = ExtResource("5_mbo6k")
+texture_focused = ExtResource("6_xm1x8")
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/StartGame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "START GAME"
+label_settings = SubResource("LabelSettings_3twwm")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_10d8l")
+texture_pressed = ExtResource("9_fkusq")
+texture_hover = ExtResource("10_cpwhw")
+texture_focused = ExtResource("11_032pa")
+stretch_mode = 0
+
+[node name="Label2" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/Credits"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -16.0
+offset_right = 110.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "CREDITS"
+label_settings = SubResource("LabelSettings_ek8kx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Quit" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_10d8l")
+texture_pressed = ExtResource("9_fkusq")
+texture_hover = ExtResource("10_cpwhw")
+texture_focused = ExtResource("11_032pa")
+stretch_mode = 0
+
+[node name="Label3" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/Quit"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -110.5
+offset_top = -16.0
+offset_right = 110.5
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "QUIT"
+label_settings = SubResource("LabelSettings_ek8kx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="CenterContainer/NinePatchRect/VBoxContainer/StartGame" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="CenterContainer/NinePatchRect/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="CenterContainer/NinePatchRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
