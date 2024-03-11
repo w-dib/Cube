@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 @onready var pivot = $Pivot
-@onready var mesh = $Pivot/MeshInstance3D
+@onready var mesh: Node3D = $Pivot/box_character
 
 var cube_size = 1.0
 var speed = 4.0

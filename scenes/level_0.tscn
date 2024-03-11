@@ -1,6 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
+[ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="2_1vwhx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_radbb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -14,9 +15,6 @@ background_mode = 2
 sky = SubResource("Sky_pydyt")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_56n5n"]
-size = Vector2(10, 10)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_fkcvr"]
 
@@ -34,17 +32,22 @@ shadow_enabled = true
 
 [node name="Cube" parent="." instance=ExtResource("1_0f86a")]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("PlaneMesh_56n5n")
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.890729, 0.454535, 0, -0.454535, 0.890729, 0, 6.13132, 5.75354)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 8)
 mesh = SubResource("CapsuleMesh_fkcvr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_nyw3l")
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh_library = ExtResource("2_1vwhx")
+data = {
+"cells": PackedInt32Array(65534, 65535, 28, 65534, 0, 28, 65534, 1, 28, 65535, 65535, 28, 65535, 0, 28, 65535, 1, 28, 0, 65535, 28, 0, 0, 28, 0, 1, 28)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)

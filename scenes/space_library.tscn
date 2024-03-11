@@ -1,0 +1,187 @@
+[gd_scene load_steps=62 format=3 uid="uid://bx1n6am5eon11"]
+
+[ext_resource type="PackedScene" uid="uid://bdkkeomoni4td" path="res://assets/3D/conveyor/arrow-basic.glb" id="1_yv5su"]
+[ext_resource type="PackedScene" uid="uid://r2655wg115f0" path="res://assets/3D/conveyor/arrow.glb" id="2_kljjx"]
+[ext_resource type="PackedScene" uid="uid://devlrcax4g4qr" path="res://assets/3D/conveyor/box-large.glb" id="3_erkwo"]
+[ext_resource type="PackedScene" uid="uid://qe0w2weex7jw" path="res://assets/3D/conveyor/box-long.glb" id="4_tdi5l"]
+[ext_resource type="PackedScene" uid="uid://bv5ts0jpakw30" path="res://assets/3D/conveyor/box-small.glb" id="5_cma4c"]
+[ext_resource type="PackedScene" uid="uid://b7tucfhc2wi6v" path="res://assets/3D/conveyor/box-wide.glb" id="6_inu21"]
+[ext_resource type="PackedScene" uid="uid://daxrda3ardq5s" path="res://assets/3D/conveyor/conveyor-bars-fence.glb" id="7_tjwtk"]
+[ext_resource type="PackedScene" uid="uid://btxsr4mkp0861" path="res://assets/3D/conveyor/conveyor-bars-high.glb" id="8_kroqv"]
+[ext_resource type="PackedScene" uid="uid://5mpv4pd202m7" path="res://assets/3D/conveyor/conveyor-bars-sides.glb" id="9_h3own"]
+[ext_resource type="PackedScene" uid="uid://ncfgtwif30oe" path="res://assets/3D/conveyor/conveyor-bars-stripe-fence.glb" id="10_qd665"]
+[ext_resource type="PackedScene" uid="uid://boorw8bq1vaw6" path="res://assets/3D/conveyor/conveyor-bars-stripe-high.glb" id="11_hntyq"]
+[ext_resource type="PackedScene" uid="uid://blfecgffvj43a" path="res://assets/3D/conveyor/conveyor-bars-stripe-side.glb" id="12_8ntad"]
+[ext_resource type="PackedScene" uid="uid://uevfau45bbwb" path="res://assets/3D/conveyor/conveyor-bars-stripe.glb" id="13_ggpgw"]
+[ext_resource type="PackedScene" uid="uid://bdy66e8clyu2v" path="res://assets/3D/conveyor/conveyor-bars.glb" id="14_m6j5h"]
+[ext_resource type="PackedScene" uid="uid://b3un6bdjysw46" path="res://assets/3D/conveyor/conveyor-long-sides.glb" id="15_5b1ja"]
+[ext_resource type="PackedScene" uid="uid://sn4l7v7l3dpo" path="res://assets/3D/conveyor/conveyor-long-stripe-sides.glb" id="16_c4dwr"]
+[ext_resource type="PackedScene" uid="uid://basn2w44gqp1n" path="res://assets/3D/conveyor/conveyor-long-stripe.glb" id="17_a0u58"]
+[ext_resource type="PackedScene" uid="uid://c0kopbb0ab4w7" path="res://assets/3D/conveyor/conveyor-long.glb" id="18_e8fv8"]
+[ext_resource type="PackedScene" uid="uid://b577ag6yyhqy3" path="res://assets/3D/conveyor/conveyor-sides.glb" id="19_ipo4x"]
+[ext_resource type="PackedScene" uid="uid://55v6elo7evub" path="res://assets/3D/conveyor/conveyor-stripe-sides.glb" id="20_5hd1k"]
+[ext_resource type="PackedScene" uid="uid://cm6nn4rh4tvqt" path="res://assets/3D/conveyor/conveyor-stripe.glb" id="21_6asoc"]
+[ext_resource type="PackedScene" uid="uid://bxn101lipjufy" path="res://assets/3D/conveyor/conveyor.glb" id="22_nmjcb"]
+[ext_resource type="PackedScene" uid="uid://bmkph0g1pjn8s" path="res://assets/3D/conveyor/cover-bar.glb" id="23_f8ojw"]
+[ext_resource type="PackedScene" uid="uid://c26jd4mtyvelc" path="res://assets/3D/conveyor/cover-corner.glb" id="24_lhxej"]
+[ext_resource type="PackedScene" uid="uid://cgsa8iedyuy6o" path="res://assets/3D/conveyor/cover-hopper.glb" id="25_7mjwm"]
+[ext_resource type="PackedScene" uid="uid://bjkuc7flu6kln" path="res://assets/3D/conveyor/cover-stripe-bar.glb" id="26_3qdye"]
+[ext_resource type="PackedScene" uid="uid://bp1xea3yxlkup" path="res://assets/3D/conveyor/cover-stripe-corner.glb" id="27_y1ng4"]
+[ext_resource type="PackedScene" uid="uid://bf7rhrt7dqliw" path="res://assets/3D/conveyor/cover-stripe-hopper.glb" id="28_irawi"]
+[ext_resource type="PackedScene" uid="uid://bylc5nxc6kak2" path="res://assets/3D/conveyor/cover-stripe-top.glb" id="29_ippfi"]
+[ext_resource type="PackedScene" uid="uid://c4hmyo4k5ops4" path="res://assets/3D/conveyor/cover-stripe-window.glb" id="30_sxusp"]
+[ext_resource type="PackedScene" uid="uid://bp1upwp2da5c4" path="res://assets/3D/conveyor/cover-stripe.glb" id="31_byx6k"]
+[ext_resource type="PackedScene" uid="uid://di8473jn02utt" path="res://assets/3D/conveyor/cover-top.glb" id="32_igxn1"]
+[ext_resource type="PackedScene" uid="uid://cfrdj02r70ybp" path="res://assets/3D/conveyor/cover-window.glb" id="33_r4n3i"]
+[ext_resource type="PackedScene" uid="uid://gitbpi1rtq71" path="res://assets/3D/conveyor/cover.glb" id="34_q11ra"]
+[ext_resource type="PackedScene" uid="uid://c5mh1l3gkssfv" path="res://assets/3D/conveyor/door-wide-closed.glb" id="35_tctqa"]
+[ext_resource type="PackedScene" uid="uid://c1hcl2wpua67v" path="res://assets/3D/conveyor/door-wide-half.glb" id="36_ha6bh"]
+[ext_resource type="PackedScene" uid="uid://dhrkuhhattvwa" path="res://assets/3D/conveyor/door-wide-open.glb" id="37_71wxy"]
+[ext_resource type="PackedScene" uid="uid://bdhbdxic4mgst" path="res://assets/3D/conveyor/door.glb" id="38_d60qy"]
+[ext_resource type="PackedScene" uid="uid://dhg22uuif42v3" path="res://assets/3D/conveyor/floor-large.glb" id="39_vwqy2"]
+[ext_resource type="PackedScene" uid="uid://dud6uktcr4q8n" path="res://assets/3D/conveyor/floor.glb" id="40_487b7"]
+[ext_resource type="PackedScene" uid="uid://yy388ryw645g" path="res://assets/3D/conveyor/robot-arm-a.glb" id="41_6glyj"]
+[ext_resource type="PackedScene" uid="uid://cgs8y73e11hvm" path="res://assets/3D/conveyor/robot-arm-b.glb" id="42_bxg1b"]
+[ext_resource type="PackedScene" uid="uid://dlcs2vgdt5y51" path="res://assets/3D/conveyor/scanner-high.glb" id="43_xthyt"]
+[ext_resource type="PackedScene" uid="uid://f2livxu6v2bm" path="res://assets/3D/conveyor/scanner-low.glb" id="44_kqbl6"]
+[ext_resource type="PackedScene" uid="uid://clwoth25w5xh7" path="res://assets/3D/conveyor/structure-corner-inner.glb" id="45_xgy86"]
+[ext_resource type="PackedScene" uid="uid://bb8ctpcx7x0nm" path="res://assets/3D/conveyor/structure-corner-outer.glb" id="46_21bi1"]
+[ext_resource type="PackedScene" uid="uid://frwxyv2hm6ib" path="res://assets/3D/conveyor/structure-doorway-wide.glb" id="47_qcvjv"]
+[ext_resource type="PackedScene" uid="uid://dsufkamcm80x3" path="res://assets/3D/conveyor/structure-doorway.glb" id="48_vyln7"]
+[ext_resource type="PackedScene" uid="uid://cf513icwfruxk" path="res://assets/3D/conveyor/structure-high.glb" id="49_dh3no"]
+[ext_resource type="PackedScene" uid="uid://4fbshleirmf4" path="res://assets/3D/conveyor/structure-medium.glb" id="50_0vjmn"]
+[ext_resource type="PackedScene" uid="uid://coim6oeq2sqbu" path="res://assets/3D/conveyor/structure-short.glb" id="51_qf6vm"]
+[ext_resource type="PackedScene" uid="uid://c6hgb77cv38lm" path="res://assets/3D/conveyor/structure-tall.glb" id="52_irrpo"]
+[ext_resource type="PackedScene" uid="uid://c0tm0bbjv2wnk" path="res://assets/3D/conveyor/structure-wall.glb" id="53_cmri6"]
+[ext_resource type="PackedScene" uid="uid://dl0hcekvg3xwx" path="res://assets/3D/conveyor/structure-window-wide.glb" id="54_sf8tl"]
+[ext_resource type="PackedScene" uid="uid://bjhn710qqvq5n" path="res://assets/3D/conveyor/structure-window.glb" id="55_mh3tv"]
+[ext_resource type="PackedScene" uid="uid://l0yp4yekw540" path="res://assets/3D/conveyor/structure-yellow-high.glb" id="56_g40ss"]
+[ext_resource type="PackedScene" uid="uid://bwpcackskhnmd" path="res://assets/3D/conveyor/structure-yellow-medium.glb" id="57_ddwc8"]
+[ext_resource type="PackedScene" uid="uid://c0cx2uwy4wjsw" path="res://assets/3D/conveyor/structure-yellow-short.glb" id="58_fb6r8"]
+[ext_resource type="PackedScene" uid="uid://cmhh2yo2ix151" path="res://assets/3D/conveyor/structure-yellow-tall.glb" id="59_pun63"]
+[ext_resource type="PackedScene" uid="uid://c4g7yry2dcp8t" path="res://assets/3D/conveyor/top-large.glb" id="60_qxptr"]
+[ext_resource type="PackedScene" uid="uid://bih5xnx7h7mui" path="res://assets/3D/conveyor/top.glb" id="61_adfh2"]
+
+[node name="SpaceLibrary" type="Node3D"]
+
+[node name="arrow-basic2" parent="." instance=ExtResource("1_yv5su")]
+
+[node name="arrow2" parent="." instance=ExtResource("2_kljjx")]
+
+[node name="box-large2" parent="." instance=ExtResource("3_erkwo")]
+
+[node name="box-long2" parent="." instance=ExtResource("4_tdi5l")]
+
+[node name="box-small2" parent="." instance=ExtResource("5_cma4c")]
+
+[node name="box-wide2" parent="." instance=ExtResource("6_inu21")]
+
+[node name="conveyor-bars-fence" parent="." instance=ExtResource("7_tjwtk")]
+
+[node name="conveyor-bars-high" parent="." instance=ExtResource("8_kroqv")]
+
+[node name="conveyor-bars-sides" parent="." instance=ExtResource("9_h3own")]
+
+[node name="conveyor-bars-stripe-fence" parent="." instance=ExtResource("10_qd665")]
+
+[node name="conveyor-bars-stripe-high" parent="." instance=ExtResource("11_hntyq")]
+
+[node name="conveyor-bars-stripe-side" parent="." instance=ExtResource("12_8ntad")]
+
+[node name="conveyor-bars-stripe2" parent="." instance=ExtResource("13_ggpgw")]
+
+[node name="conveyor-bars2" parent="." instance=ExtResource("14_m6j5h")]
+
+[node name="conveyor-long-sides" parent="." instance=ExtResource("15_5b1ja")]
+
+[node name="conveyor-long-stripe-sides" parent="." instance=ExtResource("16_c4dwr")]
+
+[node name="conveyor-long-stripe2" parent="." instance=ExtResource("17_a0u58")]
+
+[node name="conveyor-long2" parent="." instance=ExtResource("18_e8fv8")]
+
+[node name="conveyor-sides" parent="." instance=ExtResource("19_ipo4x")]
+
+[node name="conveyor-stripe-sides" parent="." instance=ExtResource("20_5hd1k")]
+
+[node name="conveyor-stripe2" parent="." instance=ExtResource("21_6asoc")]
+
+[node name="conveyor2" parent="." instance=ExtResource("22_nmjcb")]
+
+[node name="cover-bar2" parent="." instance=ExtResource("23_f8ojw")]
+
+[node name="cover-corner2" parent="." instance=ExtResource("24_lhxej")]
+
+[node name="cover-hopper2" parent="." instance=ExtResource("25_7mjwm")]
+
+[node name="cover-stripe-bar2" parent="." instance=ExtResource("26_3qdye")]
+
+[node name="cover-stripe-corner2" parent="." instance=ExtResource("27_y1ng4")]
+
+[node name="cover-stripe-hopper2" parent="." instance=ExtResource("28_irawi")]
+
+[node name="cover-stripe-top2" parent="." instance=ExtResource("29_ippfi")]
+
+[node name="cover-stripe-window2" parent="." instance=ExtResource("30_sxusp")]
+
+[node name="cover-stripe2" parent="." instance=ExtResource("31_byx6k")]
+
+[node name="cover-top2" parent="." instance=ExtResource("32_igxn1")]
+
+[node name="cover-window2" parent="." instance=ExtResource("33_r4n3i")]
+
+[node name="cover2" parent="." instance=ExtResource("34_q11ra")]
+
+[node name="door-wide-closed2" parent="." instance=ExtResource("35_tctqa")]
+
+[node name="door-wide-half2" parent="." instance=ExtResource("36_ha6bh")]
+
+[node name="door-wide-open2" parent="." instance=ExtResource("37_71wxy")]
+
+[node name="door3" parent="." instance=ExtResource("38_d60qy")]
+
+[node name="floor-large2" parent="." instance=ExtResource("39_vwqy2")]
+
+[node name="floor2" parent="." instance=ExtResource("40_487b7")]
+
+[node name="robot-arm-a2" parent="." instance=ExtResource("41_6glyj")]
+
+[node name="robot-arm-b2" parent="." instance=ExtResource("42_bxg1b")]
+
+[node name="scanner-high2" parent="." instance=ExtResource("43_xthyt")]
+
+[node name="scanner-low2" parent="." instance=ExtResource("44_kqbl6")]
+
+[node name="structure-corner-inner2" parent="." instance=ExtResource("45_xgy86")]
+
+[node name="structure-corner-outer2" parent="." instance=ExtResource("46_21bi1")]
+
+[node name="structure-doorway-wide2" parent="." instance=ExtResource("47_qcvjv")]
+
+[node name="structure-doorway2" parent="." instance=ExtResource("48_vyln7")]
+
+[node name="structure-high2" parent="." instance=ExtResource("49_dh3no")]
+
+[node name="structure-medium2" parent="." instance=ExtResource("50_0vjmn")]
+
+[node name="structure-short2" parent="." instance=ExtResource("51_qf6vm")]
+
+[node name="structure-tall2" parent="." instance=ExtResource("52_irrpo")]
+
+[node name="structure-wall2" parent="." instance=ExtResource("53_cmri6")]
+
+[node name="structure-window-wide2" parent="." instance=ExtResource("54_sf8tl")]
+
+[node name="structure-window2" parent="." instance=ExtResource("55_mh3tv")]
+
+[node name="structure-yellow-high2" parent="." instance=ExtResource("56_g40ss")]
+
+[node name="structure-yellow-medium2" parent="." instance=ExtResource("57_ddwc8")]
+
+[node name="structure-yellow-short2" parent="." instance=ExtResource("58_fb6r8")]
+
+[node name="structure-yellow-tall2" parent="." instance=ExtResource("59_pun63")]
+
+[node name="top-large2" parent="." instance=ExtResource("60_qxptr")]
+
+[node name="top2" parent="." instance=ExtResource("61_adfh2")]

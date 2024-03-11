@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://p05ayeu7a3sn"]
+
+[ext_resource type="PackedScene" uid="uid://bv5ts0jpakw30" path="res://assets/3D/conveyor/box-small.glb" id="1_xfp2g"]
+[ext_resource type="ArrayMesh" uid="uid://ltk2ocdbbp1" path="res://new_array_mesh.tres" id="2_e4qjt"]
+
+[node name="box-small2" instance=ExtResource("1_xfp2g")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0)
+
+[node name="box-small" parent="." index="0"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+mesh = ExtResource("2_e4qjt")
