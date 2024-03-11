@@ -1,0 +1,48 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1qnu05jb6uty"]
+
+[ext_resource type="PackedScene" uid="uid://qght768lhrfs" path="res://assets/3D/platformer/coinGold.glb" id="1_r1c4a"]
+
+[sub_resource type="Animation" id="Animation_2k6w0"]
+resource_name = "Rotate"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coinGold:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0), Vector3(0, 3.14159, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_ohrsn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("coinGold:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_63vfy"]
+_data = {
+"RESET": SubResource("Animation_ohrsn"),
+"Rotate": SubResource("Animation_2k6w0")
+}
+
+[node name="coinGold" instance=ExtResource("1_r1c4a")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_63vfy")
+}
+autoplay = "Rotate"

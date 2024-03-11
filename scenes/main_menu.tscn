@@ -1,13 +1,14 @@
-[gd_scene load_steps=20 format=3 uid="uid://dlxcxih8mx52a"]
+[gd_scene load_steps=21 format=3 uid="uid://dlxcxih8mx52a"]
 
 [ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_o0ddq"]
-[ext_resource type="PackedScene" uid="uid://b7u8w2iw77i2s" path="res://scenes/level_0.tscn" id="2_2o5hm"]
+[ext_resource type="PackedScene" uid="uid://b7u8w2iw77i2s" path="res://scenes/levels/level_0.tscn" id="2_2o5hm"]
 [ext_resource type="Texture2D" uid="uid://bukby5q7uf418" path="res://assets/UI/grey_panel.png" id="2_iebwc"]
 [ext_resource type="Texture2D" uid="uid://c26vwebnfk30a" path="res://assets/UI/yellow_button00.png" id="3_2pkrc"]
 [ext_resource type="Shader" path="res://shaders/scroll.gdshader" id="3_141cy"]
 [ext_resource type="Texture2D" uid="uid://cy0sm7ynfdeew" path="res://assets/UI/bg-image.png" id="4_fjwjc"]
 [ext_resource type="Texture2D" uid="uid://deitgmjm1wuq5" path="res://assets/UI/yellow_button01.png" id="4_mroeq"]
 [ext_resource type="Texture2D" uid="uid://5rhversh17vq" path="res://assets/UI/yellow_button02.png" id="5_mbo6k"]
+[ext_resource type="FontFile" uid="uid://kvjs86xbscjl" path="res://assets/fonts/Kenney Blocks.ttf" id="6_sagxe"]
 [ext_resource type="Texture2D" uid="uid://c4y4gg0sbdgxf" path="res://assets/UI/yellow_button05.png" id="6_xm1x8"]
 [ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="7_s2gne"]
 [ext_resource type="Texture2D" uid="uid://dqucwrftex7ft" path="res://assets/UI/blue_button00.png" id="8_10d8l"]
@@ -19,8 +20,8 @@
 shader = ExtResource("3_141cy")
 
 [sub_resource type="LabelSettings" id="LabelSettings_k5a16"]
-font = ExtResource("7_s2gne")
-font_size = 72
+font = ExtResource("6_sagxe")
+font_size = 60
 font_color = Color(0.34902, 0.34902, 0.34902, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3twwm"]
@@ -90,7 +91,7 @@ grow_vertical = 2
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 2
 size_flags_vertical = 3
-text = " CUBE"
+text = "EN ROUTE"
 label_settings = SubResource("LabelSettings_k5a16")
 horizontal_alignment = 1
 vertical_alignment = 1
