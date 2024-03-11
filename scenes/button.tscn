@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://b4h6nlbpe87tk"]
 
-[ext_resource type="Script" path="res://scenes/button.gd" id="1_u8aai"]
+[ext_resource type="Script" path="res://scripts/button.gd" id="1_vhvht"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbsa7"]
 resource_name = "metal"
@@ -116,9 +116,9 @@ _data = {
 "RESET": SubResource("Animation_4m0aq")
 }
 
-[node name="buttonSquare" type="Area3D"]
+[node name="buttonSquare" type="Area3D" groups=["button"]]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
-script = ExtResource("1_u8aai")
+script = ExtResource("1_vhvht")
 
 [node name="buttonSquare" type="MeshInstance3D" parent="."]
 mesh = SubResource("ArrayMesh_a55m4")
