@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=16 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_hdiol"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://clwoth25w5xh7" path="res://assets/3D/conveyor/structure-corner-inner.glb" id="3_aab4s"]
 [ext_resource type="PackedScene" uid="uid://bmlt370851srt" path="res://assets/3D/conveyor/structure-doorway-wide.glb" id="5_tubav"]
 [ext_resource type="PackedScene" uid="uid://b4h6nlbpe87tk" path="res://scenes/interactables/button.tscn" id="8_oi1hp"]
+[ext_resource type="PackedScene" uid="uid://bto4v76pc7fwx" path="res://scenes/interactables/door.tscn" id="10_mlv7l"]
 [ext_resource type="PackedScene" uid="uid://c0tm0bbjv2wnk" path="res://assets/3D/conveyor/structure-wall.glb" id="11_t8rfl"]
 [ext_resource type="PackedScene" uid="uid://dl0hcekvg3xwx" path="res://assets/3D/conveyor/structure-window-wide.glb" id="12_w11xg"]
 [ext_resource type="PackedScene" uid="uid://bjhn710qqvq5n" path="res://assets/3D/conveyor/structure-window.glb" id="13_k5wtw"]
@@ -33,6 +34,7 @@ script = ExtResource("1_hdiol")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.5, 10, 15)
+current = true
 fov = 60.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -46,7 +48,7 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2)
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, 2)
 mesh = SubResource("CapsuleMesh_fkcvr")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
@@ -62,7 +64,7 @@ data = {
 }
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
-[node name="Walls" type="Node" parent="."]
+[node name="Walls" type="Node3D" parent="."]
 
 [node name="structure-corner-inner2" parent="Walls" instance=ExtResource("3_aab4s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
@@ -214,5 +216,10 @@ transform = Transform3D(1.03316e-07, 0, -1, 0, 1, 0, 1, 0, 1.03316e-07, -6, 0, -
 [node name="structure-window5" parent="Walls" instance=ExtResource("13_k5wtw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 0, 0.423077)
 
-[node name="buttonSquare" parent="." instance=ExtResource("8_oi1hp")]
+[node name="Interactables" type="Node3D" parent="."]
+
+[node name="buttonSquare" parent="Interactables" instance=ExtResource("8_oi1hp")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.5, 0, 0)
+
+[node name="Door" parent="Interactables" instance=ExtResource("10_mlv7l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -9.1)

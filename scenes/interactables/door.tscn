@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://bto4v76pc7fwx"]
+
+[ext_resource type="PackedScene" uid="uid://c5mh1l3gkssfv" path="res://assets/3D/conveyor/door-wide-closed.glb" id="1_aantm"]
+[ext_resource type="Script" path="res://scenes/interactables/door.gd" id="2_siand"]
+
+[node name="Door" groups=["door"] instance=ExtResource("1_aantm")]
+script = ExtResource("2_siand")
