@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=14 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="2_1vwhx"]
 [ext_resource type="PackedScene" uid="uid://clwoth25w5xh7" path="res://assets/3D/conveyor/structure-corner-inner.glb" id="3_aab4s"]
 [ext_resource type="PackedScene" uid="uid://bmlt370851srt" path="res://assets/3D/conveyor/structure-doorway-wide.glb" id="5_tubav"]
+[ext_resource type="PackedScene" uid="uid://b4h6nlbpe87tk" path="res://scenes/button.tscn" id="8_oi1hp"]
 [ext_resource type="PackedScene" uid="uid://c0tm0bbjv2wnk" path="res://assets/3D/conveyor/structure-wall.glb" id="11_t8rfl"]
 [ext_resource type="PackedScene" uid="uid://dl0hcekvg3xwx" path="res://assets/3D/conveyor/structure-window-wide.glb" id="12_w11xg"]
 [ext_resource type="PackedScene" uid="uid://bjhn710qqvq5n" path="res://assets/3D/conveyor/structure-window.glb" id="13_k5wtw"]
@@ -209,3 +210,6 @@ transform = Transform3D(1.03316e-07, 0, -1, 0, 1, 0, 1, 0, 1.03316e-07, -6, 0, -
 
 [node name="structure-window5" parent="Walls" instance=ExtResource("13_k5wtw")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -6, 0, 0.423077)
+
+[node name="buttonSquare" parent="." instance=ExtResource("8_oi1hp")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -2.5, 0, 0)
