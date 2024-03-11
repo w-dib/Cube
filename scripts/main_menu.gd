@@ -1,7 +1,9 @@
 extends CanvasLayer
 
+@export var level_0: PackedScene
+
 func _on_start_game_pressed() -> void:
-	hide()
+	get_tree().change_scene_to_packed(level_0)
 
 func _on_credits_pressed() -> void:
 	print("Credits")

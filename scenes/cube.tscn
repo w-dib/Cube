@@ -20,7 +20,8 @@ script = ExtResource("1_068ih")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("BoxMesh_3im8u")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Pivot/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_n3op4")
+
+[node name="RayCast3D" type="RayCast3D" parent="."]

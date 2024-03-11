@@ -23,6 +23,14 @@ func roll(dir):
 	if rolling:
 		return
 	rolling = true
+	
+	var space = get_world_3d().direct_space_state
+	var ray = PhysicsRayQueryParameters3D.create(mesh.global_position,
+			mesh.global_position + dir * cube_size, collision_mask, [self])
+	var collision = space.intersect_ray(ray)
+	if collision:
+		rolling = false
+		return
 
 	# Step 1: Offset the pivot.
 	pivot.translate(dir * cube_size / 2)
