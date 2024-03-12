@@ -7,5 +7,5 @@ func _on_body_entered(body: Node3D) -> void:
 	animation_player.play("Click")
 	door.open()
 
-func _on_body_exited(body: Node3D) -> void:
-	animation_player.play_backwards("Click")
+#func _on_body_exited(body: Node3D) -> void:
+	#animation_player.play_backwards("Click")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bfqeo8ope8qcg"]
+[gd_scene load_steps=8 format=3 uid="uid://bcyjpcb4wsnlx"]
 
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_tfky6"]
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="2_20lhk"]
@@ -23,7 +23,7 @@ sky = SubResource("Sky_oiqfn")
 tonemap_mode = 2
 glow_enabled = true
 
-[node name="Level_0" type="Node3D"]
+[node name="Level_base" type="Node3D"]
 script = ExtResource("1_tfky6")
 
 [node name="Camera3D" type="Camera3D" parent="."]
@@ -35,11 +35,10 @@ current = true
 environment = SubResource("Environment_uhkec")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
-shadow_enabled = true
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
 
 [node name="Cube" parent="." instance=ExtResource("2_20lhk")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
