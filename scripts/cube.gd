@@ -3,6 +3,8 @@ class_name Player
 
 @onready var pivot = $Pivot
 @onready var mesh: Node3D = $Pivot/box_character
+@onready var move_sound: AudioStreamPlayer = $AudioStreamPlayer
+
 
 var cube_size = 1.0
 var speed = 4.0
@@ -10,14 +12,27 @@ var rolling = false
 
 func _physics_process(delta):
 	var forward = Vector3.FORWARD
+	var is_moving = false  # Flag to check if the player is moving
+
 	if Input.is_action_pressed("ui_up"):
 		roll(forward)
-	if Input.is_action_pressed("ui_down"):
+		is_moving = true
+	elif Input.is_action_pressed("ui_down"):
 		roll(-forward)
-	if Input.is_action_pressed("ui_right"):
+		is_moving = true
+	elif Input.is_action_pressed("ui_right"):
 		roll(forward.cross(Vector3.UP))
-	if Input.is_action_pressed("ui_left"):
+		is_moving = true
+	elif Input.is_action_pressed("ui_left"):
 		roll(-forward.cross(Vector3.UP))
+		is_moving = true
+
+	# Check if the player is moving and if the move_sound is not already playing
+	if is_moving and not move_sound.playing:
+		move_sound.play()
+	# If the player is not moving and the move_sound is playing, stop it
+	elif not is_moving and move_sound.playing:
+		move_sound.stop()
 
 func roll(dir):
 	# Do nothing if we're currently rolling.

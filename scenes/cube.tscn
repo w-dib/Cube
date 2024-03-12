@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bmnq2r1shww0h"]
+[gd_scene load_steps=5 format=3 uid="uid://bmnq2r1shww0h"]
 
 [ext_resource type="Script" path="res://scripts/cube.gd" id="1_068ih"]
 [ext_resource type="PackedScene" uid="uid://daes1vgefdxxd" path="res://assets/3D/conveyor/box_character.glb" id="3_51u2s"]
+[ext_resource type="AudioStream" uid="uid://b2n4k6cwkv8o7" path="res://assets/sound/swing-whoosh-110410.mp3" id="3_opq4x"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n3op4"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -17,3 +18,7 @@ transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.5, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_n3op4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+editor_description = "Sound Effect by <a href=\"https://pixabay.com/users/jofae-2612324/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=110410\">Joseph Levesque</a> from <a href=\"https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=110410\">Pixabay</a>"
+stream = ExtResource("3_opq4x")

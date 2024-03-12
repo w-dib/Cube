@@ -1,6 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://b4h6nlbpe87tk"]
+[gd_scene load_steps=13 format=3 uid="uid://b4h6nlbpe87tk"]
 
 [ext_resource type="Script" path="res://scripts/button.gd" id="1_vhvht"]
+[ext_resource type="AudioStream" uid="uid://d6wmntks3by4" path="res://assets/sound/switch18.ogg" id="2_qmbrj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fbsa7"]
 resource_name = "metal"
@@ -136,6 +137,9 @@ shape = SubResource("BoxShape3D_oxd44")
 libraries = {
 "": SubResource("AnimationLibrary_m2q25")
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_qmbrj")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

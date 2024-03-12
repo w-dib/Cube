@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=33 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_b31ws"]
@@ -50,6 +50,44 @@ size = Vector3(3, 3, 3)
 font = ExtResource("21_3a1tj")
 font_size = 28
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_7kt2o"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Accessories/arrow3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-2.5, 2.5, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_dkg4f"]
+resource_name = "move_arrow"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Accessories/arrow3:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0001, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-2.5, 2.5, 0), Vector3(-2.5, 2.5, 0), Vector3(-2.5, 2.3, 0), Vector3(-2.5, 2.5, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u11vq"]
+_data = {
+"RESET": SubResource("Animation_7kt2o"),
+"move_arrow": SubResource("Animation_dkg4f")
+}
 
 [node name="Level_0" type="Node3D"]
 script = ExtResource("1_b31ws")
@@ -263,17 +301,17 @@ transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -6.5, 4.5, -5.2)
 
 [node name="arrow3" parent="Accessories" instance=ExtResource("11_tl0c6")]
-transform = Transform3D(1.91068e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -2.5, 2.5, 0)
+transform = Transform3D(1.91068e-15, 4.37114e-08, 1, 1, -4.37114e-08, -1.55294e-22, 4.37114e-08, 1, -4.37114e-08, -2.5, 2.5, 0)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Accessories/arrow3"]
 transform = Transform3D(0.707107, 0.707107, 3.09086e-08, 1.77636e-15, -4.37114e-08, 1, 0.707107, -0.707107, -3.09086e-08, 0, 0.25, 0)
 light_color = Color(1, 1, 0.113725, 1)
 light_energy = 0.5
 
-[node name="box-large2" parent="." instance=ExtResource("17_8huqv")]
+[node name="box-large5" parent="Accessories" instance=ExtResource("17_8huqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
 
-[node name="box-wide2" parent="." instance=ExtResource("18_u0m1b")]
+[node name="box-wide2" parent="Accessories" instance=ExtResource("18_u0m1b")]
 transform = Transform3D(1, 0, 0, 0, 0.0871558, -0.996195, 0, 0.996195, 0.0871558, -6.2, 0.5, -2.2)
 
 [node name="ExitNode" type="Area3D" parent="."]
@@ -308,3 +346,9 @@ custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 texture = ExtResource("22_f1j1v")
 expand_mode = 5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_u11vq")
+}
+autoplay = "move_arrow"
