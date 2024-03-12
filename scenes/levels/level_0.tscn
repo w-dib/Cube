@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=29 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_hdiol"]
@@ -20,6 +20,8 @@
 [ext_resource type="PackedScene" uid="uid://b7tucfhc2wi6v" path="res://assets/3D/conveyor/box-wide.glb" id="18_u0m1b"]
 [ext_resource type="Script" path="res://components/exit_node.gd" id="19_10k1b"]
 [ext_resource type="PackedScene" uid="uid://bcyjpcb4wsnlx" path="res://scenes/levels/level_base.tscn" id="20_bqs3x"]
+[ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="21_3a1tj"]
+[ext_resource type="Texture2D" uid="uid://cqk04bi6dxo7r" path="res://assets/UI/wasd.png" id="22_f1j1v"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
 auto_exposure_enabled = true
@@ -42,6 +44,11 @@ glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_smemy"]
 size = Vector3(3, 3, 3)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2kqlx"]
+font = ExtResource("21_3a1tj")
+font_size = 28
+font_color = Color(0, 0, 0, 1)
 
 [node name="Level_0" type="Node3D"]
 script = ExtResource("1_hdiol")
@@ -267,3 +274,27 @@ next_scene = ExtResource("20_bqs3x")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="ExitNode"]
 shape = SubResource("BoxShape3D_smemy")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.9
+anchor_top = 0.9
+anchor_right = 0.9
+anchor_bottom = 0.9
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+layout_mode = 2
+text = "Move the box"
+label_settings = SubResource("LabelSettings_2kqlx")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/VBoxContainer"]
+custom_minimum_size = Vector2(125, 125)
+layout_mode = 2
+texture = ExtResource("22_f1j1v")
+expand_mode = 5

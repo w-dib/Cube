@@ -5,5 +5,10 @@
 [node name="MusicController" type="Node"]
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+editor_description = "Lobby Time by Kevin MacLeod | https://incompetech.com/
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+"
 stream = ExtResource("1_40e0j")
 autoplay = true
