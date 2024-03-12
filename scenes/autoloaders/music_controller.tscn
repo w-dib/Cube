@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b62mjmsdqkmdp"]
+
+[ext_resource type="AudioStream" uid="uid://bxk2mjnfj54x" path="res://assets/sound/Lobby-Time(chosic.com).mp3" id="1_40e0j"]
+
+[node name="MusicController" type="Node"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_40e0j")
+autoplay = true

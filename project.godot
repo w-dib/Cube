@@ -15,6 +15,10 @@ run/main_scene="res://scenes/levels/level_0.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+MusicController="*res://scenes/autoloaders/music_controller.tscn"
+
 [display]
 
 window/stretch/mode="viewport"
