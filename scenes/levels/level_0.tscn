@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=17 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="Script" path="res://scripts/camera.gd" id="1_hdiol"]
@@ -11,16 +11,18 @@
 [ext_resource type="PackedScene" uid="uid://dl0hcekvg3xwx" path="res://assets/3D/conveyor/structure-window-wide.glb" id="12_w11xg"]
 [ext_resource type="PackedScene" uid="uid://bjhn710qqvq5n" path="res://assets/3D/conveyor/structure-window.glb" id="13_k5wtw"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_radbb"]
-sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
-ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
+dof_blur_far_enabled = true
 
-[sub_resource type="Sky" id="Sky_pydyt"]
-sky_material = SubResource("ProceduralSkyMaterial_radbb")
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ba4ro"]
+sky_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
 
-[sub_resource type="Environment" id="Environment_q1e8s"]
+[sub_resource type="Sky" id="Sky_oiqfn"]
+sky_material = SubResource("ProceduralSkyMaterial_ba4ro")
+
+[sub_resource type="Environment" id="Environment_uhkec"]
 background_mode = 2
-sky = SubResource("Sky_pydyt")
+sky = SubResource("Sky_oiqfn")
 tonemap_mode = 2
 glow_enabled = true
 
@@ -34,11 +36,12 @@ script = ExtResource("1_hdiol")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.5, 10, 15)
+attributes = SubResource("CameraAttributesPractical_nx528")
 current = true
 fov = 60.0
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_q1e8s")
+environment = SubResource("Environment_uhkec")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
