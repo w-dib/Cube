@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfqeo8ope8qcg"]
+
+[ext_resource type="Script" path="res://scripts/camera.gd" id="1_tfky6"]
+[ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="2_20lhk"]
+[ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="3_iibxk"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
+auto_exposure_enabled = true
+dof_blur_far_enabled = true
+dof_blur_far_distance = 16.0
+dof_blur_near_enabled = true
+dof_blur_amount = 0.05
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ba4ro"]
+sky_horizon_color = Color(0.647059, 0.654902, 0.670588, 1)
+
+[sub_resource type="Sky" id="Sky_oiqfn"]
+sky_material = SubResource("ProceduralSkyMaterial_ba4ro")
+
+[sub_resource type="Environment" id="Environment_uhkec"]
+background_mode = 2
+sky = SubResource("Sky_oiqfn")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Level_0" type="Node3D"]
+script = ExtResource("1_tfky6")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.5, 10, 15)
+attributes = SubResource("CameraAttributesPractical_nx528")
+current = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_uhkec")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866026, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Cube" parent="." instance=ExtResource("2_20lhk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 2)
+
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh_library = ExtResource("3_iibxk")
+data = {
+"cells": PackedInt32Array(65534, 65535, 28, 65534, 0, 28, 65534, 1, 28, 65535, 65535, 28, 65535, 0, 28, 65535, 1, 28, 0, 65535, 28, 0, 0, 28, 0, 1, 28, 65534, 65532, 28, 65534, 65533, 28, 65534, 65534, 28, 65535, 65532, 28, 65535, 65533, 28, 65535, 65534, 28, 0, 65532, 28, 0, 65533, 28, 0, 65534, 28, 1, 65532, 28, 1, 65533, 28, 1, 65534, 28, 1, 65535, 28, 1, 0, 28, 1, 1, 28, 1, 2, 28, 65532, 2, 28, 65533, 2, 28, 65534, 2, 28, 65535, 2, 28, 0, 2, 28, 65532, 65532, 28, 65532, 65533, 28, 65532, 65534, 28, 65532, 65535, 28, 65532, 0, 28, 65532, 1, 28, 65533, 65532, 28, 65533, 65533, 28, 65533, 65534, 28, 65533, 65535, 28, 65533, 0, 28, 65533, 1, 28, 2, 65532, 1441820, 2, 65533, 1441820, 2, 65534, 1441820, 2, 65535, 1441820, 2, 0, 1441820, 2, 1, 1441820, 2, 2, 1441820)
+}
+metadata/_editor_floor_ = Vector3(0, 0, 0)
