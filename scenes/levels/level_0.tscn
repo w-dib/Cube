@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=30 format=3 uid="uid://b7u8w2iw77i2s"]
 
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
-[ext_resource type="Script" path="res://scripts/camera.gd" id="1_hdiol"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_b31ws"]
 [ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="2_1vwhx"]
 [ext_resource type="PackedScene" uid="uid://clwoth25w5xh7" path="res://assets/3D/conveyor/structure-corner-inner.glb" id="3_aab4s"]
 [ext_resource type="PackedScene" uid="uid://bmlt370851srt" path="res://assets/3D/conveyor/structure-doorway-wide.glb" id="5_tubav"]
@@ -21,6 +21,7 @@
 [ext_resource type="Script" path="res://components/exit_node.gd" id="19_10k1b"]
 [ext_resource type="PackedScene" uid="uid://bcyjpcb4wsnlx" path="res://scenes/levels/level_base.tscn" id="20_bqs3x"]
 [ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="21_3a1tj"]
+[ext_resource type="Script" path="res://scripts/tutorial_fade.gd" id="21_hhf0y"]
 [ext_resource type="Texture2D" uid="uid://cqk04bi6dxo7r" path="res://assets/UI/wasd.png" id="22_f1j1v"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
@@ -51,7 +52,7 @@ font_size = 28
 font_color = Color(0, 0, 0, 1)
 
 [node name="Level_0" type="Node3D"]
-script = ExtResource("1_hdiol")
+script = ExtResource("1_b31ws")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 4.5, 10, 15)
@@ -261,6 +262,14 @@ transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3
 [node name="box-large3" parent="Accessories" instance=ExtResource("17_8huqv")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -6.5, 4.5, -5.2)
 
+[node name="arrow3" parent="Accessories" instance=ExtResource("11_tl0c6")]
+transform = Transform3D(1.91068e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -2.5, 2.5, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Accessories/arrow3"]
+transform = Transform3D(0.707107, 0.707107, 3.09086e-08, 1.77636e-15, -4.37114e-08, 1, 0.707107, -0.707107, -3.09086e-08, 0, 0.25, 0)
+light_color = Color(1, 1, 0.113725, 1)
+light_energy = 0.5
+
 [node name="box-large2" parent="." instance=ExtResource("17_8huqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
 
@@ -276,6 +285,7 @@ next_scene = ExtResource("20_bqs3x")
 shape = SubResource("BoxShape3D_smemy")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("21_hhf0y")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
 anchors_preset = -1

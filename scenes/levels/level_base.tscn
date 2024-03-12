@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcyjpcb4wsnlx"]
 
-[ext_resource type="Script" path="res://scripts/camera.gd" id="1_tfky6"]
+[ext_resource type="Script" path="res://scripts/level.gd" id="1_tfky6"]
 [ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="2_20lhk"]
 [ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="3_iibxk"]
 [ext_resource type="AudioStream" uid="uid://bxk2mjnfj54x" path="res://assets/sound/Lobby-Time(chosic.com).mp3" id="4_iejwb"]
