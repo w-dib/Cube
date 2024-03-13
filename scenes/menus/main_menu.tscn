@@ -1,44 +1,44 @@
 [gd_scene load_steps=21 format=3 uid="uid://dlxcxih8mx52a"]
 
-[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_o0ddq"]
-[ext_resource type="PackedScene" uid="uid://b7u8w2iw77i2s" path="res://scenes/levels/level_0.tscn" id="2_2o5hm"]
-[ext_resource type="Texture2D" uid="uid://bukby5q7uf418" path="res://assets/UI/grey_panel.png" id="2_iebwc"]
-[ext_resource type="Texture2D" uid="uid://c26vwebnfk30a" path="res://assets/UI/yellow_button00.png" id="3_2pkrc"]
-[ext_resource type="Shader" path="res://shaders/scroll.gdshader" id="3_141cy"]
-[ext_resource type="Texture2D" uid="uid://cy0sm7ynfdeew" path="res://assets/UI/bg-image.png" id="4_fjwjc"]
-[ext_resource type="Texture2D" uid="uid://deitgmjm1wuq5" path="res://assets/UI/yellow_button01.png" id="4_mroeq"]
-[ext_resource type="Texture2D" uid="uid://5rhversh17vq" path="res://assets/UI/yellow_button02.png" id="5_mbo6k"]
-[ext_resource type="FontFile" uid="uid://kvjs86xbscjl" path="res://assets/fonts/Kenney Blocks.ttf" id="6_sagxe"]
-[ext_resource type="Texture2D" uid="uid://c4y4gg0sbdgxf" path="res://assets/UI/yellow_button05.png" id="6_xm1x8"]
-[ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="7_s2gne"]
-[ext_resource type="Texture2D" uid="uid://dqucwrftex7ft" path="res://assets/UI/blue_button00.png" id="8_10d8l"]
-[ext_resource type="Texture2D" uid="uid://qm4e86irokd4" path="res://assets/UI/blue_button01.png" id="9_fkusq"]
-[ext_resource type="Texture2D" uid="uid://dehgou8p5peoo" path="res://assets/UI/blue_button02.png" id="10_cpwhw"]
-[ext_resource type="Texture2D" uid="uid://csectm7tj0r7k" path="res://assets/UI/blue_button03.png" id="11_032pa"]
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_5dnlc"]
+[ext_resource type="PackedScene" uid="uid://b7u8w2iw77i2s" path="res://scenes/levels/level_0.tscn" id="2_8bvji"]
+[ext_resource type="Shader" path="res://shaders/scroll.gdshader" id="3_admdi"]
+[ext_resource type="Texture2D" uid="uid://cy0sm7ynfdeew" path="res://assets/UI/bg-image.png" id="4_owk4n"]
+[ext_resource type="Texture2D" uid="uid://bukby5q7uf418" path="res://assets/UI/grey_panel.png" id="5_41y1v"]
+[ext_resource type="FontFile" uid="uid://kvjs86xbscjl" path="res://assets/fonts/Kenney Blocks.ttf" id="6_cp7lh"]
+[ext_resource type="Texture2D" uid="uid://c26vwebnfk30a" path="res://assets/UI/yellow_button00.png" id="7_0q16o"]
+[ext_resource type="Texture2D" uid="uid://deitgmjm1wuq5" path="res://assets/UI/yellow_button01.png" id="8_2olaj"]
+[ext_resource type="Texture2D" uid="uid://5rhversh17vq" path="res://assets/UI/yellow_button02.png" id="9_txcay"]
+[ext_resource type="Texture2D" uid="uid://c4y4gg0sbdgxf" path="res://assets/UI/yellow_button05.png" id="10_1sswe"]
+[ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="11_qt17i"]
+[ext_resource type="Texture2D" uid="uid://dqucwrftex7ft" path="res://assets/UI/blue_button00.png" id="12_l8mq8"]
+[ext_resource type="Texture2D" uid="uid://qm4e86irokd4" path="res://assets/UI/blue_button01.png" id="13_1wy13"]
+[ext_resource type="Texture2D" uid="uid://dehgou8p5peoo" path="res://assets/UI/blue_button02.png" id="14_oe58a"]
+[ext_resource type="Texture2D" uid="uid://csectm7tj0r7k" path="res://assets/UI/blue_button03.png" id="15_ferc1"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_84drc"]
-shader = ExtResource("3_141cy")
+shader = ExtResource("3_admdi")
 
 [sub_resource type="LabelSettings" id="LabelSettings_k5a16"]
-font = ExtResource("6_sagxe")
+font = ExtResource("6_cp7lh")
 font_size = 60
 font_color = Color(0.34902, 0.34902, 0.34902, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_3twwm"]
-font = ExtResource("7_s2gne")
+font = ExtResource("11_qt17i")
 font_size = 28
 
 [sub_resource type="LabelSettings" id="LabelSettings_ek8kx"]
-font = ExtResource("7_s2gne")
+font = ExtResource("11_qt17i")
 font_size = 28
 
 [sub_resource type="LabelSettings" id="LabelSettings_p5ghv"]
-font = ExtResource("7_s2gne")
+font = ExtResource("11_qt17i")
 font_color = Color(0.34902, 0.34902, 0.34902, 1)
 
 [node name="MainMenu" type="CanvasLayer"]
-script = ExtResource("1_o0ddq")
-level_0 = ExtResource("2_2o5hm")
+script = ExtResource("1_5dnlc")
+level_0 = ExtResource("2_8bvji")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchors_preset = 15
@@ -55,7 +55,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("4_fjwjc")
+texture = ExtResource("4_owk4n")
 stretch_mode = 1
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
@@ -68,7 +68,7 @@ grow_vertical = 2
 [node name="NinePatchRect" type="NinePatchRect" parent="CenterContainer"]
 custom_minimum_size = Vector2(400, 400)
 layout_mode = 2
-texture = ExtResource("2_iebwc")
+texture = ExtResource("5_41y1v")
 region_rect = Rect2(0, 0, 100, 100)
 patch_margin_left = 10
 patch_margin_top = 10
@@ -98,10 +98,10 @@ vertical_alignment = 1
 
 [node name="StartGame" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("3_2pkrc")
-texture_pressed = ExtResource("4_mroeq")
-texture_hover = ExtResource("5_mbo6k")
-texture_focused = ExtResource("6_xm1x8")
+texture_normal = ExtResource("7_0q16o")
+texture_pressed = ExtResource("8_2olaj")
+texture_hover = ExtResource("9_txcay")
+texture_focused = ExtResource("10_1sswe")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/StartGame"]
@@ -124,10 +124,10 @@ vertical_alignment = 1
 
 [node name="Credits" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_10d8l")
-texture_pressed = ExtResource("9_fkusq")
-texture_hover = ExtResource("10_cpwhw")
-texture_focused = ExtResource("11_032pa")
+texture_normal = ExtResource("12_l8mq8")
+texture_pressed = ExtResource("13_1wy13")
+texture_hover = ExtResource("14_oe58a")
+texture_focused = ExtResource("15_ferc1")
 stretch_mode = 0
 
 [node name="Label2" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/Credits"]
@@ -150,10 +150,10 @@ vertical_alignment = 1
 
 [node name="Quit" type="TextureButton" parent="CenterContainer/NinePatchRect/VBoxContainer"]
 layout_mode = 2
-texture_normal = ExtResource("8_10d8l")
-texture_pressed = ExtResource("9_fkusq")
-texture_hover = ExtResource("10_cpwhw")
-texture_focused = ExtResource("11_032pa")
+texture_normal = ExtResource("12_l8mq8")
+texture_pressed = ExtResource("13_1wy13")
+texture_hover = ExtResource("14_oe58a")
+texture_focused = ExtResource("15_ferc1")
 stretch_mode = 0
 
 [node name="Label3" type="Label" parent="CenterContainer/NinePatchRect/VBoxContainer/Quit"]

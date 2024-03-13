@@ -1,8 +1,8 @@
-[gd_scene load_steps=33 format=3 uid="uid://b7u8w2iw77i2s"]
+[gd_scene load_steps=41 format=3 uid="uid://b7u8w2iw77i2s"]
 
-[ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="1_0f86a"]
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_b31ws"]
 [ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="2_1vwhx"]
+[ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/characters/cube.tscn" id="2_4o6b0"]
 [ext_resource type="PackedScene" uid="uid://clwoth25w5xh7" path="res://assets/3D/conveyor/structure-corner-inner.glb" id="3_aab4s"]
 [ext_resource type="PackedScene" uid="uid://bmlt370851srt" path="res://assets/3D/conveyor/structure-doorway-wide.glb" id="5_tubav"]
 [ext_resource type="PackedScene" uid="uid://b4h6nlbpe87tk" path="res://scenes/interactables/button.tscn" id="8_oi1hp"]
@@ -19,10 +19,18 @@
 [ext_resource type="PackedScene" uid="uid://devlrcax4g4qr" path="res://assets/3D/conveyor/box-large.glb" id="17_8huqv"]
 [ext_resource type="PackedScene" uid="uid://b7tucfhc2wi6v" path="res://assets/3D/conveyor/box-wide.glb" id="18_u0m1b"]
 [ext_resource type="Script" path="res://components/exit_node.gd" id="19_10k1b"]
+[ext_resource type="PackedScene" uid="uid://btxsr4mkp0861" path="res://assets/3D/conveyor/conveyor-bars-high.glb" id="19_ov54f"]
+[ext_resource type="PackedScene" uid="uid://bjkuc7flu6kln" path="res://assets/3D/conveyor/cover-stripe-bar.glb" id="20_1gp27"]
 [ext_resource type="PackedScene" uid="uid://bcyjpcb4wsnlx" path="res://scenes/levels/level_base.tscn" id="20_bqs3x"]
 [ext_resource type="FontFile" uid="uid://caogu1h5cuxjl" path="res://assets/fonts/Kenney Future.ttf" id="21_3a1tj"]
+[ext_resource type="PackedScene" uid="uid://bdhbdxic4mgst" path="res://assets/3D/conveyor/door.glb" id="21_ggwfo"]
 [ext_resource type="Script" path="res://scripts/tutorial_fade.gd" id="21_hhf0y"]
 [ext_resource type="Texture2D" uid="uid://cqk04bi6dxo7r" path="res://assets/UI/wasd.png" id="22_f1j1v"]
+[ext_resource type="PackedScene" uid="uid://4fbshleirmf4" path="res://assets/3D/conveyor/structure-medium.glb" id="22_hm75x"]
+[ext_resource type="PackedScene" uid="uid://coim6oeq2sqbu" path="res://assets/3D/conveyor/structure-short.glb" id="23_orl1s"]
+[ext_resource type="PackedScene" uid="uid://c0kopbb0ab4w7" path="res://assets/3D/conveyor/conveyor-long.glb" id="24_5janf"]
+[ext_resource type="PackedScene" uid="uid://bxn101lipjufy" path="res://assets/3D/conveyor/conveyor.glb" id="25_m2p34"]
+[ext_resource type="PackedScene" uid="uid://cgsa8iedyuy6o" path="res://assets/3D/conveyor/cover-hopper.glb" id="26_tdp61"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
 auto_exposure_enabled = true
@@ -103,7 +111,7 @@ environment = SubResource("Environment_uhkec")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866024, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.75, -0.43301, 0, 0, 0)
 
-[node name="Cube" parent="." instance=ExtResource("1_0f86a")]
+[node name="Cube" parent="." instance=ExtResource("2_4o6b0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, 0)
 
 [node name="GridMap" type="GridMap" parent="."]
@@ -286,10 +294,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 3.5, -5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 4, -5)
 
 [node name="box-long3" parent="Accessories" instance=ExtResource("16_fu0uq")]
-transform = Transform3D(0, 0, 1, 1, 2.98023e-08, 0, 2.98023e-08, 1, 0, -6, 0.5, -2.75)
+transform = Transform3D(0, 0, 1, 1, 2.98023e-08, 0, 2.98023e-08, 1, 0, -6, 0.5, 0.75)
+
+[node name="box-long5" parent="Accessories" instance=ExtResource("16_fu0uq")]
+transform = Transform3D(0, 0, 1, 1, 2.98023e-08, 0, 2.98023e-08, 1, 0, -4, 0.9, -4.25)
 
 [node name="box-long4" parent="Accessories" instance=ExtResource("16_fu0uq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 0.5)
 
 [node name="box-large2" parent="Accessories" instance=ExtResource("17_8huqv")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, 0, 4.5, -5.2)
@@ -299,6 +310,9 @@ transform = Transform3D(-3.09086e-08, -0.707107, 0.707107, 1, -4.37114e-08, 0, 3
 
 [node name="box-large3" parent="Accessories" instance=ExtResource("17_8huqv")]
 transform = Transform3D(1.91069e-15, 4.37114e-08, 1, 1, -4.37114e-08, 0, 4.37114e-08, 1, -4.37114e-08, -6.5, 4.5, -5.2)
+
+[node name="box-large6" parent="Accessories" instance=ExtResource("17_8huqv")]
+transform = Transform3D(-4.2222e-08, -0.965926, 0.258819, 1, -4.37114e-08, 0, 1.13133e-08, 0.258819, 0.965926, 6.3, 3.5, -1.7)
 
 [node name="arrow3" parent="Accessories" instance=ExtResource("11_tl0c6")]
 transform = Transform3D(1.91068e-15, 4.37114e-08, 1, 1, -4.37114e-08, -1.55294e-22, 4.37114e-08, 1, -4.37114e-08, -2.5, 2.5, 0)
@@ -311,8 +325,77 @@ light_energy = 0.5
 [node name="box-large5" parent="Accessories" instance=ExtResource("17_8huqv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, -8)
 
+[node name="box-large7" parent="Accessories" instance=ExtResource("17_8huqv")]
+transform = Transform3D(-4.22219e-08, -0.965926, -0.258819, 1, -4.37114e-08, 0, -1.13133e-08, -0.258819, 0.965926, 6.2366, 4, -0.0633974)
+
+[node name="box-large8" parent="Accessories" instance=ExtResource("17_8huqv")]
+transform = Transform3D(0.5, 0, -0.866025, 0, 1, 0, 0.866025, 0, 0.5, 5.9634, 3, -0.136602)
+
 [node name="box-wide2" parent="Accessories" instance=ExtResource("18_u0m1b")]
-transform = Transform3D(1, 0, 0, 0, 0.0871558, -0.996195, 0, 0.996195, 0.0871558, -6.2, 0.5, -2.2)
+transform = Transform3D(1, 0, 0, 0, 0.0871558, -0.996195, 0, 0.996195, 0.0871558, -6.2, 0.5, 1.3)
+
+[node name="box-long6" parent="Accessories" instance=ExtResource("16_fu0uq")]
+transform = Transform3D(0, 0, 1, 1, 2.98023e-08, 0, 2.98023e-08, 1, 0, -8, 3.5, 0.75)
+
+[node name="box-long7" parent="Accessories" instance=ExtResource("16_fu0uq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 3, 0.5)
+
+[node name="box-wide3" parent="Accessories" instance=ExtResource("18_u0m1b")]
+transform = Transform3D(1, 0, 0, 0, 0.0871558, -0.996195, 0, 0.996195, 0.0871558, -8.2, 3.5, 1.3)
+
+[node name="box-long8" parent="Accessories" instance=ExtResource("16_fu0uq")]
+transform = Transform3D(-2.6054e-15, -8.74228e-08, -1, 1, 2.98023e-08, 0, -2.98023e-08, -1, 8.74228e-08, -8, 3.5, -0.55)
+
+[node name="box-long9" parent="Accessories" instance=ExtResource("16_fu0uq")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -8, 3, -0.3)
+
+[node name="box-wide4" parent="Accessories" instance=ExtResource("18_u0m1b")]
+transform = Transform3D(-1, -8.70901e-08, -7.6194e-09, 0, 0.0871558, -0.996195, 8.74228e-08, -0.996195, -0.0871558, -8, 3.5, -1.1)
+
+[node name="conveyor-bars-high" parent="Accessories" instance=ExtResource("19_ov54f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -4)
+
+[node name="conveyor-bars-fence17" parent="Accessories" instance=ExtResource("15_304ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -4)
+
+[node name="conveyor-bars-fence18" parent="Accessories" instance=ExtResource("15_304ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, -4)
+
+[node name="conveyor-bars-fence19" parent="Accessories" instance=ExtResource("15_304ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+
+[node name="cover-stripe-bar2" parent="Accessories" instance=ExtResource("20_1gp27")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, -4)
+
+[node name="door3" parent="Accessories" instance=ExtResource("21_ggwfo")]
+transform = Transform3D(0, 0, -1, 0, 1, 0, 1, 0, 0, -6.4, 0, -1)
+
+[node name="structure-medium2" parent="Accessories" instance=ExtResource("22_hm75x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -5.4)
+
+[node name="structure-medium3" parent="Accessories" instance=ExtResource("22_hm75x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -7.4)
+
+[node name="structure-short2" parent="Accessories" instance=ExtResource("23_orl1s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -3.5)
+
+[node name="structure-short3" parent="Accessories" instance=ExtResource("23_orl1s")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 0, -4.5)
+
+[node name="conveyor-long2" parent="Accessories" instance=ExtResource("24_5janf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.01, 0.8, -6.4)
+
+[node name="conveyor-long3" parent="Accessories" instance=ExtResource("24_5janf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.01, 0.8, -8.4)
+
+[node name="conveyor2" parent="Accessories" instance=ExtResource("25_m2p34")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2.01, 0, -4)
+
+[node name="conveyor3" parent="Accessories" instance=ExtResource("25_m2p34")]
+transform = Transform3D(-4.37114e-08, 0, -1, -0.5, 0.866025, 2.18557e-08, 0.866025, 0.5, -3.78552e-08, -2.001, 0.5, -5)
+
+[node name="cover-hopper2" parent="Accessories" instance=ExtResource("26_tdp61")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -2, 0.5, -8)
 
 [node name="ExitNode" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 0, -10.5)

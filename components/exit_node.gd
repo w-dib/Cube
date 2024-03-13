@@ -11,4 +11,4 @@ func _ready() -> void:
 func on_exit_node_entered(body: Node3D):
 	if body is Player:
 		get_tree().change_scene_to_packed(next_scene)
-		
+		queue_free()

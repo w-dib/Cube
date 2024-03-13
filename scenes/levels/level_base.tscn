@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bcyjpcb4wsnlx"]
 
 [ext_resource type="Script" path="res://scripts/level.gd" id="1_tfky6"]
-[ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/cube.tscn" id="2_20lhk"]
+[ext_resource type="PackedScene" uid="uid://bmnq2r1shww0h" path="res://scenes/characters/cube.tscn" id="2_20lhk"]
 [ext_resource type="MeshLibrary" uid="uid://bfyqtgjjftmce" path="res://mesh_libraries/space_library.tres" id="3_iibxk"]
 
 [sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_nx528"]
